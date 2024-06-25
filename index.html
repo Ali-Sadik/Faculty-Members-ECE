@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="kuetlogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>Teachers Profile ECE</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      overflow-x: hidden;
+      font-family: "Manrope", sans-serif;
+    }
+
+    .faculty {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-weight: bold;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0px 40px rgba(0, 0, 0, 0.1);
+      margin: 1em;
+      transition: box-shadow 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: 0 0px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-right: 1em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+      color: #00a651;
+    }
+
+    .card-text span {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+
+    .btn-primary {
+      border-radius: 30px;
+      padding: 0.5em 1.5em;
+      margin-top: 1em;
+      background-color: #00a651;
+      border-color: #00a651;
+      transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    }
+
+    .btn-primary:hover {
+      background-color: #0e5e35;
+      border-color: #0e5e35;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .card-img-top {
+        margin-bottom: 1em;
+      }
+    }
+
+    #progress-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: transparent;
+        z-index: 9999;
+      }
+
+      #progress-bar {
+        height: 4px;
+        background-color: #00a651;
+        width: 0;
+        animation: progressBarAnimation 1s forwards;
+      }
+
+      @keyframes progressBarAnimation {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @media (width < 768px)
+      {
+        .faculty
+        {
+          font-size: 30px;
+        }
+
+      .card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      padding: 3px;
+      margin-left: -1px;
+     
+    }
+    .card:hover
+    {
+      box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+    }
+    .card-text span {
+      font-size: 12px;
+    }
+    .card-title{
+      font-size: 20px;
+    }
+    .card-img-top {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 1em;
+      margin-left: 1em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+      }
+
+  </style>
+</head>
+<body>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  <div class="container">
+    <h1 class="faculty">
+      Faculty <span style="color: #00a651">Members</span> ECE
+    </h1>
+
+    <div class="row">
+      <!-- First row of cards -->
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/1.png" class="card-img-top" alt="Teacher 1">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Md. Mostafizur Rahman</h5>
+            <p class="card-text">
+              <span>Department of Electronics and Communication Engineering</span>
+              <span>Khulna University of Engineering & Technology (KUET)</span>
+              <span>Khulna -9203, Bangladesh.</span>
+              <span>+88-01714087372</span>
+              <span>mostafiz963@yahoo.com</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/2.png" class="card-img-top" alt="Teacher 2">
+          <div class="card-body">
+            <h5 class="card-title">Dr. Md. Faruque Hossain</h5>
+            <p class="card-text">
+                <span>Department of Electronics and Communication Engineering</span>
+                <span>Khulna University of Engineering & Technology (KUET)</span>
+                <span>Khulna -9203, Bangladesh.</span>
+                <span>+8801714087376</span>
+              <span>fhossain@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- First row of cards -->
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/3.png" class="card-img-top" alt="Teacher 1">
+          <div class="card-body">
+            <h5 class="card-title">Dr. A.B.M Aowlad Hossain</h5>
+            <p class="card-text">
+              <span>Department of Electronics and Communication Engineering</span>
+              <span>Khulna University of Engineering & Technology (KUET)</span>
+              <span>Khulna -9203, Bangladesh.</span>
+              <span>+88-01766591057</span>
+              <span>aowlad0403@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/4.png" class="card-img-top" alt="Teacher 2">
+          <div class="card-body">
+            <h5 class="card-title">Dr.Md.Foisal Hossain </h5>
+            <p class="card-text">
+                <span>Department of Electronics and Communication Engineering</span>
+                <span>Khulna University of Engineering & Technology (KUET)</span>
+                <span>Khulna -9203, Bangladesh.</span>
+                <span>+8801714087375</span>
+              <span>foisal@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- First row of cards -->
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/5.png" class="card-img-top" alt="Teacher 1">
+          <div class="card-body">
+            <h5 class="card-title">Dr.Pallab Kumar Choudhury</h5>
+            <p class="card-text">
+              <span>Department of Electronics and Communication Engineering</span>
+              <span>Khulna University of Engineering & Technology (KUET)</span>
+              <span>Khulna -9203, Bangladesh.</span>
+              <span>+88-01711031968</span>
+              <span>pallab@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/6.png" class="card-img-top" alt="Teacher 2">
+          <div class="card-body">
+            <h5 class="card-title">Dr.Sk Shariful Alam</h5>
+            <p class="card-text">
+                <span>Department of Electronics and Communication Engineering</span>
+                <span>Khulna University of Engineering & Technology (KUET)</span>
+                <span>Khulna -9203, Bangladesh.</span>
+                <span>+8801714087379</span>
+              <span>ssalam@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- First row of cards -->
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/7.png" class="card-img-top" alt="Teacher 1">
+          <div class="card-body">
+            <h5 class="card-title">Dr Monir Hossen</h5>
+            <p class="card-text">
+              <span>Department of Electronics and Communication Engineering</span>
+              <span>Khulna University of Engineering & Technology (KUET)</span>
+              <span>Khulna -9203, Bangladesh.</span>
+              <span>+88-01714087380</span>
+              <span>mhossen@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/8.png" class="card-img-top" alt="Teacher 2">
+          <div class="card-body">
+            <h5 class="card-title">Dr.Sheikh Md Rabiul Islam</h5>
+            <p class="card-text">
+                <span>Department of Electronics and Communication Engineering</span>
+                <span>Khulna University of Engineering & Technology (KUET)</span>
+                <span>Khulna -9203, Bangladesh.</span>
+                <span>+880174087378</span>
+              <span>robi@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- First row of cards -->
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/9.png" class="card-img-top" alt="Teacher 1">
+          <div class="card-body">
+            <h5 class="card-title">Dr.Mirza Mohd Shahriar Maswood</h5>
+            <p class="card-text">
+              <span>Department of Electronics and Communication Engineering</span>
+              <span>Khulna University of Engineering & Technology (KUET)</span>
+              <span>Khulna -9203, Bangladesh.</span>
+              <span>+88-01317810947</span>
+              <span>shahriar@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/10.png" class="card-img-top" alt="Teacher 2">
+          <div class="card-body">
+            <h5 class="card-title">Mr.Md Mehedi Hasan</h5>
+            <p class="card-text">
+                <span>Department of Electronics and Communication Engineering</span>
+                <span>Khulna University of Engineering & Technology (KUET)</span>
+                <span>Khulna -9203, Bangladesh.</span>
+                <span>+8801714173057</span>
+              <span>mehedi@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- First row of cards -->
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/11.png" class="card-img-top" alt="Teacher 1">
+          <div class="card-body">
+            <h5 class="card-title">Mr.Md Maroof Hossain Shuvo</h5>
+            <p class="card-text">
+              <span>Department of Electronics and Communication Engineering</span>
+              <span>Khulna University of Engineering & Technology (KUET)</span>
+              <span>Khulna -9203, Bangladesh.</span>
+              <span>+88-01818336201</span>
+              <span>maruf.shuvo@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/12.png" class="card-img-top" alt="Teacher 2">
+          <div class="card-body">
+            <h5 class="card-title">Mr. Tasnim Azad Abir</h5>
+            <p class="card-text">
+                <span>Department of Electronics and Communication Engineering</span>
+                <span>Khulna University of Engineering & Technology (KUET)</span>
+                <span>Khulna -9203, Bangladesh.</span>
+                <span>+8801723235579</span>
+              <span>tasnimabir@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- First row of cards -->
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/13.png" class="card-img-top" alt="Teacher 1">
+          <div class="card-body">
+            <h5 class="card-title">Mr.Chandan Saha</h5>
+            <p class="card-text">
+              <span>Department of Electronics and Communication Engineering</span>
+              <span>Khulna University of Engineering & Technology (KUET)</span>
+              <span>Khulna -9203, Bangladesh.</span>
+              <span></span>
+              <span>chandan@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/14.png" class="card-img-top" alt="Teacher 2">
+          <div class="card-body">
+            <h5 class="card-title">Mr.Shuvashis Saha</h5>
+            <p class="card-text">
+                <span>Department of Electronics and Communication Engineering</span>
+                <span>Khulna University of Engineering & Technology (KUET)</span>
+                <span>Khulna -9203, Bangladesh.</span>
+                <span></span>
+              <span>anikkuet@yahoo.com</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- First row of cards -->
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/15.png" class="card-img-top" alt="Teacher 1">
+          <div class="card-body">
+            <h5 class="card-title">Mr.Dipayan Biswas</h5>
+            <p class="card-text">
+              <span>Department of Electronics and Communication Engineering</span>
+              <span>Khulna University of Engineering & Technology (KUET)</span>
+              <span>Khulna -9203, Bangladesh.</span>
+              <span>+88-01713586288</span>
+              <span>dipayanbiswas@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <img src="images/16.png" class="card-img-top" alt="Teacher 1">
+          <div class="card-body">
+            <h5 class="card-title">Mrs.Nazifa Tabassum</h5>
+            <p class="card-text">
+              <span>Department of Electronics and Communication Engineering</span>
+              <span>Khulna University of Engineering & Technology (KUET)</span>
+              <span>Khulna -9203, Bangladesh.</span>
+              <span>+88-01767337867</span>
+              <span>nazifa.ece12@ece.kuet.ac.bd</span>
+              <!-- Add more details as needed -->
+            </p>
+            <a href="#" class="btn btn-primary">Student Corner</a>
+          </div>
+        </div>
+      </div>
+      </div>
+        <div class="row">
+          <!-- First row of cards -->
+          <div class="col-lg-6">
+            <div class="card">
+              <img src="images/17.png" class="card-img-top" alt="Teacher 1">
+              <div class="card-body">
+                <h5 class="card-title">Mr.MD.Foysal</h5>
+                <p class="card-text">
+                  <span>Department of Electronics and Communication Engineering</span>
+                  <span>Khulna University of Engineering & Technology (KUET)</span>
+                  <span>Khulna -9203, Bangladesh.</span>
+                  <span>+88-01784688250</span>
+                  <span>mdfoysal@ece.kuet.ac.bd</span>
+                  <!-- Add more details as needed -->
+                </p>
+                <a href="#" class="btn btn-primary">Student Corner</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card">
+              <img src="images/18.png" class="card-img-top" alt="Teacher 1">
+              <div class="card-body">
+                <h5 class="card-title">Mr.Md Ebtidaul Karim</h5>
+                <p class="card-text">
+                  <span>Department of Electronics and Communication Engineering</span>
+                  <span>Khulna University of Engineering & Technology (KUET)</span>
+                  <span>Khulna -9203, Bangladesh.</span>
+                  <span>+88-01684155132</span>
+                  <span>ebtikarim@ece.kuet.ac.bd</span>
+                  <!-- Add more details as needed -->
+                </p>
+                <a href="#" class="btn btn-primary">Student Corner</a>
+              </div>
+            </div>
+          </div>
+        </div>
+            <div class="row">
+              <!-- First row of cards -->
+              <div class="col-lg-6">
+                <div class="card">
+                  <img src="images/19.png" class="card-img-top" alt="Teacher 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Mr Arif Hossan</h5>
+                    <p class="card-text">
+                      <span>Department of Electronics and Communication Engineering</span>
+                      <span>Khulna University of Engineering & Technology (KUET)</span>
+                      <span>Khulna -9203, Bangladesh.</span>
+                      <span>+88-01521248251</span>
+                      <span>arifhossan@ece.kuet.ac.bd</span>
+                      <!-- Add more details as needed -->
+                    </p>
+                    <a href="#" class="btn btn-primary">Student Corner</a>
+                  </div>
+                </div>
+              </div>
+                <div class="col-lg-6">
+                  <div class="card">
+                    <img src="images/20.png" class="card-img-top" alt="Teacher 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Mr.Md Khorshed Alom</h5>
+                      <p class="card-text">
+                        <span>Department of Electronics and Communication Engineering</span>
+                        <span>Khulna University of Engineering & Technology (KUET)</span>
+                        <span>Khulna -9203, Bangladesh.</span>
+                        <span>+88-01521471754</span>
+                        <span>khorshed@ece.kuet.ac.bd</span>
+                        <!-- Add more details as needed -->
+                      </p>
+                      <a href="#" class="btn btn-primary">Student Corner</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                <div class="row">
+                  <!-- First row of cards -->
+                  <div class="col-lg-6">
+                    <div class="card">
+                      <img src="images/21.png" class="card-img-top" alt="Teacher 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Mr.Shah Muhammad Azmat Ullah</h5>
+                        <p class="card-text">
+                          <span>Department of Electronics and Communication Engineering</span>
+                          <span>Khulna University of Engineering & Technology (KUET)</span>
+                          <span>Khulna -9203, Bangladesh.</span>
+                          <span>+88-01637079641</span>
+                          <span>azmat@ece.kuet.ac.bd</span>
+                          <!-- Add more details as needed -->
+                        </p>
+                        <a href="#" class="btn btn-primary">Student Corner</a>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="col-lg-6">
+                      <div class="card">
+                        <img src="images/22.png" class="card-img-top" alt="Teacher 1">
+                        <div class="card-body">
+                          <h5 class="card-title">Mr.Mushfiqur Rahman Masuk</h5>
+                          <p class="card-text">
+                            <span>Department of Electronics and Communication Engineering</span>
+                            <span>Khulna University of Engineering & Technology (KUET)</span>
+                            <span>Khulna -9203, Bangladesh.</span>
+                            <span>+88-01886756233</span>
+                            <span>masuk@ece.kuet.ac.bd</span>
+                            <!-- Add more details as needed -->
+                          </p>
+                          <a href="#" class="btn btn-primary">Student Corner</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                    <div class="row">
+                      <!-- First row of cards -->
+                      <div class="col-lg-6">
+                        <div class="card">
+                          <img src="images/23.png" class="card-img-top" alt="Teacher 1">
+                          <div class="card-body">
+                            <h5 class="card-title">Mr.Md Minhajul Islam Arnab</h5>
+                            <p class="card-text">
+                              <span>Department of Electronics and Communication Engineering</span>
+                              <span>Khulna University of Engineering & Technology (KUET)</span>
+                              <span>Khulna -9203, Bangladesh.</span>
+                              <span>+88-01911058415</span>
+                              <span>arnab@ece.kuet.ac.bd</span>
+                              <!-- Add more details as needed -->
+                            </p>
+                            <a href="#" class="btn btn-primary">Student Corner</a>
+                          </div>
+                        </div>
+                      </div>
+                        <div class="col-lg-6">
+                          <div class="card">
+                            <img src="images/24.png" class="card-img-top" alt="Teacher 1">
+                            <div class="card-body">
+                              <h5 class="card-title">Mr Naymur Rahman</h5>
+                              <p class="card-text">
+                                <span>Department of Electronics and Communication Engineering</span>
+                                <span>Khulna University of Engineering & Technology (KUET)</span>
+                                <span>Khulna -9203, Bangladesh.</span>
+                                <span>+88-01703153182</span>
+                                <span>naymur@ece.kuet.ac.bd</span>
+                                <!-- Add more details as needed -->
+                              </p>
+                              <a href="#" class="btn btn-primary">Student Corner</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="card">
+                              <img src="images/25.png" class="card-img-top" alt="Teacher 1">
+                              <div class="card-body">
+                                <h5 class="card-title">Ms.Shafrin Sultana</h5>
+                                <p class="card-text">
+                                  <span>Department of Electronics and Communication Engineering</span>
+                                  <span>Khulna University of Engineering & Technology (KUET)</span>
+                                  <span>Khulna -9203, Bangladesh.</span>
+                                  <span>+88-01977207337</span>
+                                  <span>shafrin337@ece.kuet.ac.bd</span>
+                                  <!-- Add more details as needed -->
+                                </p>
+                                <a href="#" class="btn btn-primary">Student Corner</a>
+                              </div>
+                            </div>
+                          </div>
+                            <div class="col-lg-6">
+                              <div class="card">
+                                <img src="images/26.png" class="card-img-top" alt="Teacher 1">
+                                <div class="card-body">
+                                  <h5 class="card-title">Mr.Nawaz Talukder Sanglap</h5>
+                                  <p class="card-text">
+                                    <span>Department of Electronics and Communication Engineering</span>
+                                    <span>Khulna University of Engineering & Technology (KUET)</span>
+                                    <span>Khulna -9203, Bangladesh.</span>
+                                    <span>+88-01760711055</span>
+                                    <span>sanglap@ece.kuet.ac.bd</span>
+                                    <!-- Add more details as needed -->
+                                  </p>
+                                  <a href="#" class="btn btn-primary">Student Corner</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+</div>
+<script>
+// Function to show progress bar for 1 second
+function showProgressBar(callback) {
+        // Show progress bar
+        document.getElementById("progress-bar").style.display = "block";
+
+        // Hide progress bar after 1 second
+        setTimeout(function () {
+          document.getElementById("progress-bar").style.display = "none";
+          if (callback) {
+            callback(); // Execute callback function
+          }
+        }, 1000);
+      }
+
+      window.addEventListener("load", function () {
+        showProgressBar(); // Show progress bar on page load
+      });
+
+</script>
+</body>
+</html>
+
