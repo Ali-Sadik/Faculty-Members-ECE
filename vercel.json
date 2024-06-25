@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "*.html",
+      "src": "index.html",
       "use": "@vercel/static"
     },
     {
@@ -10,19 +10,15 @@
       "use": "@vercel/static"
     },
     {
-      "src": "*.jpg",
+      "src": "images/*.jpg",
       "use": "@vercel/static"
     },
     {
-      "src": "*.png",
+      "src": "images/*.png",
       "use": "@vercel/static"
     },
     {
       "src": "*.ico",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "assets/**/*",
       "use": "@vercel/static"
     }
   ],
@@ -33,5 +29,6 @@
     }
   ]
 }
+
 
   
