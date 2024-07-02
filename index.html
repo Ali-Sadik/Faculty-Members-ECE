@@ -147,6 +147,17 @@
 
       @media (width < 768px)
       {
+        body.dark-mode .card {
+          width: 96%;
+          margin-left: 8px;
+        }
+        body.dark-mode .card {
+          box-shadow: 0 0 100px rgba(255, 255, 255, 0.3);
+      }
+      body.dark-mode .card:hover
+      {
+        box-shadow: 0 0 100px rgba(255, 255, 255, 0.3);
+      }
         .faculty
         {
           font-size: 30px;
@@ -231,6 +242,20 @@
 
       input:checked + .slider:before {
         transform: translateX(26px);
+      }
+     body.dark-mode {
+        background-color: black;
+        color: white;
+      }
+      body.dark-mode .card {
+        background-color: #0a0a0a;
+        color: #ffffff;
+        border: 1px solid #888;
+        border-radius: 12px;
+      }
+      body.dark-mode .card:hover
+      {
+        box-shadow: 0 0 100px rgba(255, 255, 255, 0.3);
       }
   </style>
 </head>
